@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NovaTransferenciaComponent implements OnInit {
 
+  transferir() {
+    console.log("oi")
+  }
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }
