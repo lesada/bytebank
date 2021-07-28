@@ -7,14 +7,20 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class NovaTransferenciaComponent {
 
-  @Output()transferirEvent = new EventEmitter<any>();
+  @Output() transferirEvent = new EventEmitter<any>();
 
   valor: number = 0;
   destino: number = 0;
 
   transferir() {
-    const valorEmitir = {valor: this.valor, destino: this.destino}
-    this.transferirEvent.emit(valorEmitir)
+    const valorEmitir = { valor: this.valor, destino: this.destino };
+    this.transferirEvent.emit(valorEmitir);
+    this.limparCampos()
+  }
+
+  limparCampos() {
+    this.valor = 0;
+    this.destino = 0;
   }
 
 }
