@@ -11,6 +11,7 @@ export class AppComponent {
   transferencias: any[] = [];
 
   transferirCallback($event: any) {
-    this.transferencias.push($event);
+    const transferencia = {...$event, data: new Date()}
+    this.transferencias.push(transferencia);
   }
 }
