@@ -4,16 +4,30 @@
 
     <div class="formField">
       <label class="formFieldLabel" for="valor">Valor</label>
-      <input class="formFieldInput" id="valor" type="number"  [(ngModel)]="valor" name="valor"/>
+      <input
+        class="formFieldInput"
+        id="valor"
+        type="number"
+        [(ngModel)]="valor"
+        name="valor"
+      />
     </div>
 
     <div class="formField">
       <label class="formFieldLabel" for="destino">Destino</label>
-      <input class="formFieldInput" id="destino" type="text" name="destino" [(ngModel)]="destino"/>
+      <input
+        class="formFieldInput"
+        id="destino"
+        type="text"
+        name="destino"
+        [(ngModel)]="destino"
+      />
     </div>
 
     <div class="divButton">
-      <button class="button" type="submit">Transferir</button>
+      <button class="button" type="submit" (click)="navigateTo()">
+        Transferir
+      </button>
     </div>
   </form>
 </section>

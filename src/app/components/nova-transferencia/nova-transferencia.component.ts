@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nova-transferencia',
@@ -6,6 +7,10 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./nova-transferencia.component.scss']
 })
 export class NovaTransferenciaComponent {
+
+  constructor(
+    private router: Router
+  ) { }
 
   @Output() transferirEvent = new EventEmitter<any>();
 
@@ -21,6 +26,10 @@ export class NovaTransferenciaComponent {
   limparCampos() {
     this.valor = 0;
     this.destino = 0;
+  }
+
+  navigateTo() {
+    this.router.navigateByUrl('extrato');
   }
 
 }
